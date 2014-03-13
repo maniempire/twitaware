@@ -13,7 +13,7 @@ public class Db2ContextListener implements ServletContextListener,Db2ServerInfo 
 	
 	private static String fs = System.getProperty("file.separator");
 	// To set Db4o configuration XML file name
-	public static final String KEY_DB4O_CONFIG_FILE = "SocioRespoConfig.xml";
+	public static final String KEY_DB4O_CONFIG_FILE = "TwitAwareConfig.xml";
 	// To set as context attribute key value for server
 	public static final String KEY_DB4O_SERVER = "db2Server";
 	
