@@ -39,6 +39,8 @@ public String initAuthUrl() {
 			
 		} catch (TwitterException e) {
 			
+			e.printStackTrace();
+			
 			//processTwitterException(e);	
 		}
 

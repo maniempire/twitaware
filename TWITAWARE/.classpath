@@ -13,7 +13,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/TWITAWAREREQUIREDJARS/TWITTER/twitter4j-core-2.1.3-SNAPSHOT.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TWITAWAREBL"/>
+	<classpathentry exported="true" kind="lib" path="/TWITAWAREREQUIREDJARS/TWITTER/twitter4j-core-2.1.3-SNAPSHOT.jar"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/TWITAWAREBL"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

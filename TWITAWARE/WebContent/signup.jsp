@@ -50,7 +50,7 @@ document.write(curr_year + "-" + curr_month + "-" + curr_date);*/
 <table width="1010" border="0" height="100%">
 
 <tr>
-    <td valign="top" ><img src="images/socio-respo-header.jpg" width="1010" height="123" /></td>
+    <td valign="top" ><img src="images/twitaware_header.jpg" width="1010" height="123" /></td>
   </tr>
   
 <tr>
@@ -150,7 +150,7 @@ document.write(curr_year + "-" + curr_month + "-" + curr_date);*/
   
   
   </tr>
-  <tr>
+  <!-- <tr>
   		<td class="login-cont">Voter Id</td>
   		<td>
             
@@ -158,7 +158,7 @@ document.write(curr_year + "-" + curr_month + "-" + curr_date);*/
          
         </td>
   
-  </tr>
+  </tr> -->
   <tr></tr>
   <tr>
   <td height="7" align="center"><input name="Submit" type="submit" class="login-but" value="Submit" onclick="save()"/></td>

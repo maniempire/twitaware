@@ -81,13 +81,7 @@ Post your Thoughts here:
 Stream of Thoughts:
 </td>
 </tr>
-<logic:iterate id="result" name="homeActionForm" property="tagList">
-<tr>
-<td class="body-text" height="25">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<bean:write name="result" property="content" />
-</td>
-</tr>
-</logic:iterate>
+
 </table>
  
 

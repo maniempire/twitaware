@@ -36,7 +36,7 @@ public LoginDTO isValidUser(LoginDTO loginDTO){
 		try	{
 			
 
-		sqlQuery = "select * from user  where user_email_id='"+loginDTO.getEmailId()+"' and user_password = '" +loginDTO.getPassword() +"'";
+		sqlQuery = "select * from users  where user_email_id='"+loginDTO.getEmailId()+"' and user_password = '" +loginDTO.getPassword() +"'";
 
 	
 		loginDTO = new LoginDTO();
@@ -87,7 +87,7 @@ private void loginstatus(int userId) {
 		
 	sqlStmt =sqlCon.createStatement();
 		
-	preparedStatement=sqlCon.prepareStatement("UPDATE user SET user_status='active' WHERE user_id="+userId+"");
+	preparedStatement=sqlCon.prepareStatement("UPDATE users SET user_status='active' WHERE user_id="+userId+"");
 
 	preparedStatement.executeUpdate();
 
@@ -115,7 +115,7 @@ public boolean logoutUser(int userId) {
 		
 	sqlStmt =sqlCon.createStatement();
 		
-	preparedStatement=sqlCon.prepareStatement("UPDATE user SET user_status='inactive' WHERE user_id="+userId+"");
+	preparedStatement=sqlCon.prepareStatement("UPDATE users SET user_status='inactive' WHERE user_id="+userId+"");
 
 
 	preparedStatement.executeUpdate();

@@ -51,7 +51,7 @@ private ProfileDTO insertProfile(ProfileDTO profileDTO) {
 
 
 		
-	preparedStatement=sqlCon.prepareStatement("insert into profile (profile_id,profile_user_id,first_name,last_name,gender,phone_no,email_id,date_of_birth,voter_id) values (default,'"+profileDTO.getUserId()+"','"+profileDTO.getFirstName()+"','"+profileDTO.getLastName()+"','"+profileDTO.getGender()+"','"+profileDTO.getPhoneNum()+"','"+profileDTO.getMailId()+"','"+dateofbirth+"','"+profileDTO.getVoterId()+"')");
+	preparedStatement=sqlCon.prepareStatement("insert into profiles (profile_id,profile_user_id,first_name,last_name,gender,phone_no,email_id,date_of_birth) values (default,'"+profileDTO.getUserId()+"','"+profileDTO.getFirstName()+"','"+profileDTO.getLastName()+"','"+profileDTO.getGender()+"','"+profileDTO.getPhoneNum()+"','"+profileDTO.getMailId()+"','"+dateofbirth+"')");
 	
 	preparedStatement.executeUpdate();
 	
@@ -87,11 +87,11 @@ private ProfileDTO insertUser(ProfileDTO profileDTO) {
 	sqlStmt =sqlCon.createStatement();
 	
 	
-	preparedStatement=sqlCon.prepareStatement("insert into user (user_id,user_email_id,user_password,user_status) values (default,'"+profileDTO.getMailId()+"','"+profileDTO.getPassword()+"','active')");
+	preparedStatement=sqlCon.prepareStatement("insert into users (user_id,user_email_id,user_password,user_status) values (default,'"+profileDTO.getMailId()+"','"+profileDTO.getPassword()+"','active')");
 
 	preparedStatement.executeUpdate();
 	
-	sqlQuery = "select * from user where user_email_id = '"+profileDTO.getMailId()+"'";
+	sqlQuery = "select * from users where user_email_id = '"+profileDTO.getMailId()+"'";
 	
 	
 		
@@ -142,7 +142,7 @@ public ProfileDTO getuserProfile(ProfileDTO profileDTO){
 	
 	//sqlQuery = "select * from profile where profile_user_id = '"+profileDTO.getUserId()+"'";
 
-	sqlQuery = "select u.user_password,p.profile_id,p.profile_user_id,p.first_name,p.last_name,p.gender,p.phone_no,p.email_id,p.date_of_birth,p.voter_id from user u,profile p where u.user_id=p.profile_user_id and user_id='"+profileDTO.getUserId()+"'";
+	sqlQuery = "select u.user_password,p.profile_id,p.profile_user_id,p.first_name,p.last_name,p.gender,p.phone_no,p.email_id,p.date_of_birth from users u,profiles p where u.user_id=p.profile_user_id and user_id='"+profileDTO.getUserId()+"'";
 	
 		sqlCon = getSQLConnection(); 
 		
@@ -160,7 +160,7 @@ public ProfileDTO getuserProfile(ProfileDTO profileDTO){
 			profileDTO.setPhoneNum(resultSet.getString(7));
 			profileDTO.setMailId(resultSet.getString(8));
 			profileDTO.setDob(resultSet.getString(9));
-			profileDTO.setVoterId(resultSet.getString(10));
+//			profileDTO.setVoterId(resultSet.getString(10));
 				
 		}
 			
@@ -193,11 +193,11 @@ public ProfileDTO updateProfile(ProfileDTO profileDTO) {
 		
 	sqlStmt =sqlCon.createStatement();
 	
-	preparedStatement=sqlCon.prepareStatement("UPDATE profile SET first_name='"+profileDTO.getFirstName()+"',last_name='"+profileDTO.getLastName()+"',gender='"+profileDTO.getGender()+"',phone_no='"+profileDTO.getPhoneNum()+"',email_id='"+profileDTO.getMailId()+"',date_of_birth='"+profileDTO.getDob()+"',voter_id='"+profileDTO.getVoterId()+"' WHERE profile_user_id="+profileDTO.getUserId()+"");
+	preparedStatement=sqlCon.prepareStatement("UPDATE profiles SET first_name='"+profileDTO.getFirstName()+"',last_name='"+profileDTO.getLastName()+"',gender='"+profileDTO.getGender()+"',phone_no='"+profileDTO.getPhoneNum()+"',email_id='"+profileDTO.getMailId()+"',date_of_birth='"+profileDTO.getDob()+"' WHERE profile_user_id="+profileDTO.getUserId()+"");
 	
 	preparedStatement.executeUpdate();
 	
-	preparedStatement=sqlCon.prepareStatement("UPDATE user SET user_password='"+profileDTO.getPassword()+"',user_email_id='"+profileDTO.getMailId()+"' WHERE user_id="+profileDTO.getUserId()+"");
+	preparedStatement=sqlCon.prepareStatement("UPDATE users SET user_password='"+profileDTO.getPassword()+"',user_email_id='"+profileDTO.getMailId()+"' WHERE user_id="+profileDTO.getUserId()+"");
 	preparedStatement.executeUpdate();
 	}catch (SQLException e) {
 		

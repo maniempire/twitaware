@@ -20,7 +20,7 @@ import com.twitaware.bl.LoginBL;
 
 import com.twitaware.bl.ProfileBL;
 import com.twitaware.bl.TwitterBL;
-import com.twitaware.dto.LinkedInDTO;
+
 import com.twitaware.dto.LoginDTO;
 import com.twitaware.dto.PostDTO;
 import com.twitaware.dto.ProfileDTO;
