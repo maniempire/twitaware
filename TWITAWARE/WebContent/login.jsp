@@ -170,19 +170,19 @@ function checkLogin(){
         	   
         	   <tr >
         	    <td valign="top" class="landing-page-text">
-        	 <li> Share your thoughts about society</li>
+        	 <li>Listing social awareness of the people across the world</li>
         	   </td>
         	   </tr>
         	   
         	   <tr>
         	    <td valign="top" class="landing-page-text">
-        	  <li> Post your thoughts as complaints</li>
+        	  <li>Customized key word search on social issues</li>
         	   </td>
         	   </tr>
         	   
         	   <tr>
         	    <td valign="top" class="landing-page-text">
-        	  <li> Debate on social issue</li>
+        	  <li>Connect with like-minded people</li>
         	   </td>
         	   </tr>
         	   <tr>

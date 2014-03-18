@@ -16,8 +16,11 @@ public class TwitterBL {
 
 	 Twitter twitter = null;
 
-		private static final String CONSUMER_KEY = "842CPqEwrBDFQ6MYV64ZLw";
-		private static final String CONSUMER_SECRET = "Xdy2WxNzLAgo7lDPSnWQUSB1wOFoLwMbvIrg1yiyU";
+		private static final String CONSUMER_KEY = "842CPqEwrBDFQ6MYV64ZLw"; //SocioRespo key
+		//private static final String CONSUMER_KEY = "yM3fDGkrIJIiWiTuSl3DA"; //Twitaware key
+		
+		private static final String CONSUMER_SECRET = "Xdy2WxNzLAgo7lDPSnWQUSB1wOFoLwMbvIrg1yiyU";//SocioRespo key
+		//private static final String CONSUMER_SECRET = "yBnYPSMaNyvCNXrQauKFn8xS6WfKMvPFcYgZ2GAY3w";
 
 		 
 		 public TwitterBL(){
@@ -225,6 +228,8 @@ public AccessToken addTwitterToken(String oauthToken, String oAuthVerifier) {
 			accessToken = twitter.getOAuthAccessToken(oauthToken,oAuthVerifier);
 		} catch (TwitterException e) {
 			// TODO Auto-generated catch block
+			
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		

@@ -45,7 +45,7 @@
 <table border="0" cellpadding="0" height="200"  cellspacing="0" width="300" align="center" >
 <tr>
 <td height="35" class="text-headline">
-Post your Thoughts here:
+Share your Thoughts here:
 </td>
 </tr>
 
@@ -57,11 +57,11 @@ Post your Thoughts here:
 <tr>
 <td height="30" class="body-text">
 	&nbsp;&nbsp;&nbsp;&nbsp;
-  		<input type="checkbox" name="shareFacebook"></input>Facebook 
+  		<!-- <input type="checkbox" name="shareFacebook"></input>Facebook  -->
     
 		<input type="checkbox" name="shareTwitter"></input>Twitter
 		
-		<input type="checkbox" name="shareLinkedIn"></input>LinkedIn
+		<!-- <input type="checkbox" name="shareLinkedIn"></input>LinkedIn -->
 </td>
 </tr>
 <tr>
@@ -78,7 +78,7 @@ Post your Thoughts here:
 <table border="0" cellpadding="3" height="200"  cellspacing="3" width="300" align="center" >
 <tr>
 <td class="text-headline" height="35" valign="top">
-Stream of Thoughts:
+Stream of Tweets based on customized keywords:
 </td>
 </tr>
 
@@ -161,7 +161,7 @@ Hot Links
 &nbsp;
 </td>
 <td  height="35">
-<html:link href="postComplaintsAction.do?link_url=complaint">Complaints</html:link>
+<html:link href="postComplaintsAction.do?link_url=complaint">Connect Like Minded People</html:link>
 </td>
 <td>
 &nbsp;
@@ -172,7 +172,7 @@ Hot Links
 &nbsp;
 </td>
 <td height="35">
-<html:link href="debateAction.do?link_url=debate" >Online Debate</html:link>
+<html:link href="debateAction.do?link_url=debate" >Tweets based on Regions</html:link>
 </td>
 <td>
 &nbsp;
